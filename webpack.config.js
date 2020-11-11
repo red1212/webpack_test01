@@ -9,6 +9,7 @@ module.exports = {
   },
   output:{
     filename: `[name].bundle.js`,
+    publicPath: '/',
    // path: path.resolve(__dirname, 'dist')
   },
   //loader
@@ -42,6 +43,7 @@ module.exports = {
     port: 8080,
     contentBase:'./dist'
   },
+ 
   //插件
   plugins:[
     new CleanWebpackPlugin(),
