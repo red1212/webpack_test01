@@ -1,4 +1,4 @@
-
+import _ from 'lodash';
 import './index.css'
 import Icon from './logo1.png'
 import print from './print.js'

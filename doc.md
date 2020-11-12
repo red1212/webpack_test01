@@ -17,3 +17,12 @@
 ## 2020年11月12日 生成环境构建
 每个环境编写独立的webpack配置，webpack-merge合并配置，减少重复代码 npm install --save-dev webpack-merge
 uglifyjs-webpack-plugin 代码压缩
+
+--> 之前用于去掉重复的引用CommonsChunkPlugin被移除，现在采用splitChunks进行代码分离
+  一、webpack中的三个概念module、chunk和bundle
+. module: 就是js的模块化webpack支持commonJs,ES6等模块化规范，简单来说就是你通过import语句引入的代码
+. chunk: chunk 是webpack根据功能拆分出来的，包含三种情况：
+  1、你的项目入口(entry)
+  2、通过import动态引入的代码
+  3、通过splitChunks拆分出来的代码
+. bundle:bundle是webpack打包之后的各个文件，一般就是和chunk是一对一的关系，bundle就是对chunk进行编译压缩打包等处理之后产出
