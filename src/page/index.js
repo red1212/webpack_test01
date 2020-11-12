@@ -2,6 +2,10 @@
 import './index.css'
 import Icon from './logo1.png'
 import print from './print.js'
+console.log(process.env.NODE_ENV)
+if(process.env.NODE_ENV !=='production'){
+  console.log('Looks like we are in development mode!')
+}
 function component() {
   var element = document.createElement('div');
 

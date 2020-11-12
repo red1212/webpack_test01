@@ -13,3 +13,7 @@
 --> webpack-devmiddleware 是一个容器,它可以把webpack处理后的文件传递给一个服务器（server）
 
 -->自定义server服务
+
+## 2020年11月12日 生成环境构建
+每个环境编写独立的webpack配置，webpack-merge合并配置，减少重复代码 npm install --save-dev webpack-merge
+uglifyjs-webpack-plugin 代码压缩
