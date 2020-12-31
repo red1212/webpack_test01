@@ -13,6 +13,6 @@ app.use(webpackDevMiddleware(compiler,{
 }))
 
 //设置端口号
-app.listen(3000,function(){
+app.listen(2000,function(){
   console.log('端口号')
 })

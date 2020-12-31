@@ -26,3 +26,6 @@ uglifyjs-webpack-plugin 代码压缩
   2、通过import动态引入的代码
   3、通过splitChunks拆分出来的代码
 . bundle:bundle是webpack打包之后的各个文件，一般就是和chunk是一对一的关系，bundle就是对chunk进行编译压缩打包等处理之后产出
+
+## 2020年12月20日
+path.resolve(__dirname, 'dist')  __dirname代表当前文件目录的绝对文件

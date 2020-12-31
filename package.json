@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --config webpack.dev.js",
+    "start": "set port=9009 && webpack-dev-server --config webpack.dev.js",
     "server": "node server.js"
   },
   "author": "",
@@ -18,15 +18,17 @@
     "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
+    "http-proxy-middleware": "^1.0.6",
     "style-loader": "^2.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.43.0",
+    "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^4.0.2",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.3.0"
   },
   "dependencies": {
+    "less-loader": "^7.2.1",
     "webpack-bundle-analyzer": "^4.1.0"
   }
 }
