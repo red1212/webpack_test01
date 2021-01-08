@@ -1,4 +1,4 @@
-//dev环境配置
+//  //配置react的本地服务
 
 const {merge} = require('webpack-merge')
 const common = require('./webpack.common.js')
@@ -9,6 +9,6 @@ module.exports = merge(common,{
   devServer:{
     open: true,   //自动打开浏览器
     port: 8080,
-    contentBase:'./dist'
+    contentBase:'./src'
   }
 })

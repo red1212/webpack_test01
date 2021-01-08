@@ -3,33 +3,44 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');   //在build之前自动删除dist文件
-let BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-  entry:'./src/page/index.js',
-  // entry:{
-  //   app:'./src/page/index.js',
-  //   print:'./src/page/print.js',
-  // },
-  output:{
+  entry: './src/index.js',
+  output: {
     filename: `bundle.js`,
     publicPath: '/',
     path: path.resolve(__dirname, 'dist')
   },
+  resolve: {
+    extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx']
+  },
   //loader
-  module:{
-    rules:[
+  module: {
+    rules: [
       {
-        test:/\.css$/,
-        use:[
+        test: /\.jsx?$/, // jsx/js文件的正则
+        exclude: /node_modules/, // 排除 node_modules 文件夹
+        use: {
+          // loader 是 babel
+          loader: 'babel-loader',
+          options: {
+            // babel 转义的配置选项
+            babelrc: false,
+            presets: ["@babel/preset-react", "@babel/preset-env"],
+            cacheDirectory: true
+          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [
           'style-loader',
           'css-loader'
         ]
       },
       {
-        test:/\.less$/,
-        use:[
+        test: /\.less$/,
+        use: [
           //创建style标签将js的样式资源插入进行，添加到head中生效
           'style-loader',
           //将css文件变成commonjs模块加载到js中，里面内容是样式字符串
@@ -42,12 +53,13 @@ module.exports = {
   },
 
   //插件
-  plugins:[
-    new CleanWebpackPlugin(),
-    new BundleAnalyzerPlugin(),
-    // new HtmlWebpackPlugin({
-    //   template:'src/page/index.html'
-    // }),
+  plugins: [
+    //复制html到打包文件夹下
+    new HtmlWebpackPlugin({
+      template:'public/index.html',
+      filename:'index.html',
+      inject:true
+    }),
   ],
 
 }

@@ -1,0 +1,22 @@
+## webpack搭建react开发环境
+1 npm init 
+2 安装react react-dom 
+3 安装bable babel-loader @babel/core @babel/preset-env  @babel/preset-react
+
+4 在配置文件中添加对JSX语法的支持
+5 html-webpack-plugin 配置 创建一个index.html 作为基本拷贝到打包目录下
+
+npm run build 打包
+
+配置react的本地服务
+1/cnpm i webpack-dev-server -D   在webpack.dev.js中添加相关配置
+  devServer:{
+    contentBase:path.join(__dirname,'.src'),
+    publicPath:'/',
+    host:'127.0.0.1',
+    port:3000,
+  }
+  修改package.json文件的scripts 添加start字段   然后执行 npm start 
+  2/ webpack-dev-server 4的版本和webpack 5的版本不兼容 需要安装webpack-cli@3.3.12 
+
+ 
