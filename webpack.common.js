@@ -49,17 +49,5 @@ module.exports = {
     //   template:'src/page/index.html'
     // }),
   ],
-  optimization:{
-    splitChunks:{
-      chunks:'all',
-      automaticNameDelimiter: '.',   //打包之后的连接符
-      cacheGroups:{
-        commons:{
-          name:'common',     //打包之后的包名称
-          test: /[\\/]node_modules[\\/]/,
-          priority: 10,
-        }
-      }
-    }
-  }
+
 }
