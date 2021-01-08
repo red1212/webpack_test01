@@ -10,6 +10,10 @@
     "start": "set port=9009 && webpack-dev-server --config webpack.dev.js",
     "server": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@https://github.com/red1212/webpack_test01.git"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
