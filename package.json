@@ -1,8 +1,8 @@
 {
   "name": "build-a",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "webpack.common.js",
+  "main": "./dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.common.js",

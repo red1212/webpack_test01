@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import Index from './page.js'
 ReactDom.render(
-  <div>hello  webpack1 !!!</div>
+  <Index/>
   ,document.getElementById('root')
 )

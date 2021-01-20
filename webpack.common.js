@@ -8,8 +8,11 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: `bundle.js`,
-    publicPath: '/',
-    path: path.resolve(__dirname, 'dist')
+    // publicPath: '/',
+    path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'umd',
+    libraryExport: 'default',
+    library: "testReact", 
   },
   resolve: {
     extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx']
