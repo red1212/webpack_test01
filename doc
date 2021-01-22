@@ -12,7 +12,6 @@ npm run build 打包
 1/cnpm i webpack-dev-server -D   在webpack.dev.js中添加相关配置
   devServer:{
     contentBase:path.join(__dirname,'.src'),
-    publicPath:'/',
     host:'127.0.0.1',
     port:3000,
   }
@@ -20,3 +19,9 @@ npm run build 打包
   2/ webpack-dev-server 4的版本和webpack 5的版本不兼容 需要安装webpack-cli@3.3.12 
 
  
+
+ 作为包：
+ 1，entry里面应该使用导出的页面，而不是入口的index.js，本地测试用index.Js 
+ 2. 在导出文件使用 libraryTarget: 'umd',
+    libraryExport: 'default', 默认
+    library: "testReact",   包名

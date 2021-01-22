@@ -1,14 +1,14 @@
-//公用的配置--作为本地测试
+//作为包的配置 主要是入口和输出
 
 const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
-  entry: './src/index.js',      //本地测试用src/index.js，作为包使用src/page.js
+  entry: './src/page.js',//'./src/index.js',      //本地测试用src/index.js，作为包使用src/page.js
   output: {
     filename: `bundle.js`,
     path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'umd',
+    libraryExport: 'default',
+    library: "testReact", 
   },
   resolve: {
     extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx']
@@ -50,15 +50,5 @@ module.exports = {
       },
     ]
   },
-
-  //插件
-  plugins: [
-    //复制html到打包文件夹下
-    new HtmlWebpackPlugin({
-      template:'public/index.html',
-      filename:'index.html',
-      inject:true
-    }),
-  ],
 
 }
