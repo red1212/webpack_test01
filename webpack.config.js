@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
     libraryExport: 'default',
-    library: "testReact", 
+    library: "maintest", 
   },
   resolve: {
     extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx']

@@ -16,7 +16,7 @@ npm run build 打包
     port:3000,
   }
   修改package.json文件的scripts 添加start字段   然后执行 npm start 
-  2/ webpack-dev-server 4的版本和webpack 5的版本不兼容 需要安装webpack-cli@3.3.12 
+  2/ webpack-dev-server 4的版本和webpack 5的版本不兼容 需要安装npm
 
  
 
