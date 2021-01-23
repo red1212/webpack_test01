@@ -1,0 +1,89 @@
+.kkui-slider-unlock {
+  width: 300px;
+  border: 1px solid #eee;
+  background-color: #eee;
+  height: 40px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: content-box;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+.kkui-slider-unlock .kkui-slider-unlock-item {
+  position: absolute;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+}
+.kkui-slider-unlock .kkui-slider-unlock-bg, .kkui-slider-unlock .kkui-slider-unlock-bg-success {
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 40px;
+  cursor: move;
+  position: absolute;
+  border-radius: 2px;
+  top: 0px;
+  left: 0;
+}
+.kkui-slider-unlock .kkui-slider-unlock-bg:before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-width: 1px 1px 0 0;
+  content: " ";
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.4);
+  display: block;
+  transform: rotate(45deg) translate(-70%, 0%);
+  -webkit-transform: rotate(45deg) translate(-70%, 0%);
+  left: 50%;
+  top: 50%;
+}
+.kkui-slider-unlock .kkui-slider-unlock-bg:after {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-width: 1px 1px 0 0;
+  content: " ";
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.4);
+  display: block;
+  transform: rotate(45deg) translate(-60%, -10%);
+  -webkit-transform: rotate(45deg) translate(-60%, -10%);
+  left: 30%;
+  top: 50%;
+}
+.kkui-slider-unlock .kkui-slider-unlock-bg-success > span {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+}
+.kkui-slider-unlock .kkui-slider-unlock-bg-success > span::after {
+  position: absolute;
+    width: 16px;
+    height: 13px;
+    border-width: 2px 2px 0 0;
+    content: '';
+    border-style: solid;
+    border-color: #ffffff;
+    display: block;
+    transform: translate(-50%, -50%) rotate(130deg);
+    -webkit-transform: translate(-50%, -50%) rotate(130deg);
+    left: 50%;
+    top: 40%;
+}

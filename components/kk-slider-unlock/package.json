@@ -1,0 +1,70 @@
+{
+  "_from": "kk-slider-unlock",
+  "_id": "kk-slider-unlock@1.1.14",
+  "_inBundle": false,
+  "_integrity": "sha512-WiJe0NQjuLEgNL8wNyB3eAzRpTQgI9CV9Sp95I4hYWEM2JxdoAYGKb0vNii1mqUwYvBJtbFAlPboSKXLLt/x5g==",
+  "_location": "/kk-slider-unlock",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "kk-slider-unlock",
+    "name": "kk-slider-unlock",
+    "escapedName": "kk-slider-unlock",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/kk-slider-unlock/-/kk-slider-unlock-1.1.14.tgz",
+  "_shasum": "de7a041836fa821eec4f51f8548dd6c81a21db26",
+  "_spec": "kk-slider-unlock",
+  "_where": "D:\\LovingCoineWeb\\web-home",
+  "author": {
+    "name": "webzhi"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "antd": "4.9.4",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "deprecated": false,
+  "description": "这是一个react的滑动解锁。",
+  "devDependencies": {
+    "@babel/core": "7.11.4",
+    "@types/react": "16.9.48",
+    "@types/react-dom": "16.9.8",
+    "babel-preset-react-app": "9.1.2",
+    "parcel": "1.12.4",
+    "preact": "10.4.8",
+    "sass": "1.26.10",
+    "ts-loader": "8.0.3",
+    "typescript": "4.0.2"
+  },
+  "homepage": "https://www.asni.cn",
+  "keywords": [
+    "slider",
+    "unlock",
+    "react",
+    "webzhi"
+  ],
+  "license": "ISC",
+  "main": "./lib/index.js",
+  "name": "kk-slider-unlock",
+  "scripts": {
+    "lib:build": "tsc && sass --no-source-map src/index.scss lib/index.css",
+    "start": "parcel src/public/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "./lib/index.d.ts",
+  "version": "1.1.14"
+}
